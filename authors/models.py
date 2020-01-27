@@ -19,7 +19,7 @@ class Books(models.Model):
         (GREEN, ('GREEN')),
     ]
     title = models.CharField(max_length=120)
-    available = models.BooleanField()
+    available = models.BooleanField(default=True)
     color=  models.CharField(max_length=120, choices=colors, default=RED)
     author= models.ForeignKey(Authors, on_delete=models.CASCADE)
 
